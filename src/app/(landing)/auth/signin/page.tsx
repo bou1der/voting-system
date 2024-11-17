@@ -53,14 +53,14 @@ export default function SignInPage() {
 
   return (
     <div className="h-screen container flex items-center justify-center">
-      <div className="rounded-xl shadow-xl border-2 border-input p-6 space-y-6 flex flex-col">
+      <div className="rounded-xl shadow-xl border-2 border-input sm:w-96 p-6 space-y-4 flex flex-col">
         <h1 className="text-2xl font-medium">Вход</h1>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit((data) => {
               OnSubmit({ provider: "email", data });
             }, OnError)}
-            className="space-y-2"
+            className="space-y-4"
           >
             <FormField
               control={form.control}

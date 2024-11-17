@@ -31,9 +31,9 @@ export default function RootLayout({
       lang="en"
       className={` ${sherif.variable} ${ main_font.variable} font-main`}
     >
-      <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-      </body>
+        <body>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </body>
     </html>
   );
 }

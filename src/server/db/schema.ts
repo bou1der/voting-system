@@ -9,6 +9,7 @@ import {
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
+import {createId} from "@paralleldrive/cuid2"
 import type { AdapterAccount } from "next-auth/adapters";
 
 export const createTable = pgTableCreator((_name) => `project_${_name}`);
@@ -19,7 +20,7 @@ export const users = createTable("user", {
   id: varchar("id", { length: 255 })
     .notNull()
     .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
+    .$defaultFn(() => createId()),
   name: varchar("name", { length: 255 }),
   email: varchar("email", { length: 255 }).notNull(),
   emailVerified: timestamp("email_verified", {

@@ -40,17 +40,17 @@
   }
 
   h1 {
-    @apply font-normal text-3xl sm:text-6xl;
+    @apply font-normal font-sherif-mc text-3xl sm:text-6xl;
   }
   h2 {
-    @apply font-normal text-2xl sm:text-4xl;
+    @apply font-normal font-sherif-mc text-2xl sm:text-4xl;
   }
 
   h3 {
-    @apply font-normal text-xl;
+    @apply font-normal font-sherif-mc text-xl;
   }
 
   p {
-    @apply font-normal text-xl;
+    @apply font-normal font-sherif-mc text-xl;
   }
 }
