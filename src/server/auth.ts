@@ -6,9 +6,6 @@ import {
 } from "next-auth";
 import type { Adapter } from "next-auth/adapters";
 import EmailProvider from "next-auth/providers/email";
-import GithubProvider from "next-auth/providers/github";
-import GoogleProvider from "next-auth/providers/google";
-import YandexProvider from "next-auth/providers/yandex";
 
 import { eq } from "drizzle-orm";
 import { env } from "~/env";

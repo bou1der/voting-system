@@ -4,7 +4,7 @@ import { Globus } from "./globe";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { Info, User } from "lucide-react";
+import { Info, TicketSlash, User } from "lucide-react";
 
 export async function WelcomeBlock(){
   const session = await getServerSession()
@@ -20,7 +20,7 @@ export async function WelcomeBlock(){
         <div className="z-10 flex justify-center gap-4 ">
             {
               session ? (
-                <Link href="/voites"><Button variant="ghost" className="backdrop-blur border space-x-2 text-primary border-primary hover:bg-primary hover:text-primary-foreground"><Info className="size-5" /><p>Голосования</p></Button></Link>
+                <Link href="/voites"><Button variant="ghost" className="backdrop-blur border space-x-2 text-primary border-primary hover:bg-primary hover:text-primary-foreground"><TicketSlash className="size-5" /><p>Голосования</p></Button></Link>
               ):
               (
                 <Link href="/auth/signin"><Button variant="ghost" className="backdrop-blur border space-x-2 text-primary border-primary hover:bg-primary hover:text-primary-foreground"><User className="size-5" /><p>Войти</p></Button></Link>
