@@ -11,23 +11,9 @@ import {
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "next-auth/adapters";
 
-export const createTable = pgTableCreator((_name) => `project_{name}`);
+export const createTable = pgTableCreator((_name) => `project_${_name}`);
 
 export const userRoleEnum = pgEnum("user_role", ["ADMIN", "USER"]);
-
-export const files = createTable("files", {
-  id: varchar("id", { length: 255 })
-    .notNull()
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  fileName: varchar("file_name", { length: 255 }).notNull(),
-  fileSize: integer("file_size").notNull(),
-  contentType: varchar("content_type", { length: 255 }).notNull(),
-
-  objectId: varchar("object_id", { length: 255 }).notNull(),
-  createdById: varchar("created_by", { length: 255 }).notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-});
 
 export const users = createTable("user", {
   id: varchar("id", { length: 255 })

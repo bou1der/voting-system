@@ -68,18 +68,6 @@ export const authOptions: NextAuthOptions = {
     verificationTokensTable: verificationTokens,
   }) as Adapter,
   providers: [
-    GithubProvider({
-      clientId: env.GITHUB_CLIENT_ID,
-      clientSecret: env.GITHUB_CLIENT_SECRET,
-    }),
-    GoogleProvider({
-      clientId: env.GOOGLE_CLIENT_ID,
-      clientSecret: env.GOOGLE_CLIENT_SECRET,
-    }),
-    YandexProvider({
-      clientId: env.YANDEX_CLIENT_ID,
-      clientSecret: env.YANDEX_CLIENT_SECRET,
-    }),
     EmailProvider({
       server: {
         host: env.EMAIL_HOST,

@@ -84,26 +84,6 @@ export default function SignInPage() {
             </Button>
           </form>
         </Form>
-        <div className="space-y-2 flex flex-col">
-          <Button
-            className="min-w-[300px]"
-            onClick={() => OnSubmit({ provider: "google", data: undefined })}
-          >
-            Войти через Google
-          </Button>
-          <Button
-            className="min-w-[300px]"
-            onClick={() => OnSubmit({ provider: "github", data: undefined })}
-          >
-            Войти через Github
-          </Button>
-          <Button
-            className="min-w-[300px]"
-            onClick={() => OnSubmit({ provider: "yandex", data: undefined })}
-          >
-            Войти через Yandex
-          </Button>
-        </div>
       </div>
     </div>
   );
